@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-02-25T01:48:41.588Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" etag="EZ0xLq9CZqO3h8UqfU7x" version="16.6.2" type="github" pages="12">
+<mxfile host="app.diagrams.net" modified="2022-02-25T08:05:43.148Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" etag="qdvajfWKE0KQISGD_mwk" version="16.6.4" type="github" pages="13">
   <diagram id="fqtC57XP0jYVe-Dkvt3n" name="BuildConfig">
     <mxGraphModel dx="1422" dy="766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -119,25 +119,25 @@
       <root>
         <mxCell id="hriTVlDyNItKuXLIzfGo-0" />
         <mxCell id="hriTVlDyNItKuXLIzfGo-1" parent="hriTVlDyNItKuXLIzfGo-0" />
-        <mxCell id="hriTVlDyNItKuXLIzfGo-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="hriTVlDyNItKuXLIzfGo-1" source="hriTVlDyNItKuXLIzfGo-2" target="hriTVlDyNItKuXLIzfGo-3">
+        <mxCell id="hriTVlDyNItKuXLIzfGo-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="hriTVlDyNItKuXLIzfGo-1" source="hriTVlDyNItKuXLIzfGo-2" target="hriTVlDyNItKuXLIzfGo-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="hriTVlDyNItKuXLIzfGo-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="hriTVlDyNItKuXLIzfGo-1" source="hriTVlDyNItKuXLIzfGo-2" target="hriTVlDyNItKuXLIzfGo-5">
+        <mxCell id="hriTVlDyNItKuXLIzfGo-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="hriTVlDyNItKuXLIzfGo-1" source="hriTVlDyNItKuXLIzfGo-2" target="hriTVlDyNItKuXLIzfGo-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="hriTVlDyNItKuXLIzfGo-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="hriTVlDyNItKuXLIzfGo-1" source="hriTVlDyNItKuXLIzfGo-2" target="hriTVlDyNItKuXLIzfGo-8">
+        <mxCell id="hriTVlDyNItKuXLIzfGo-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="hriTVlDyNItKuXLIzfGo-1" source="hriTVlDyNItKuXLIzfGo-2" target="hriTVlDyNItKuXLIzfGo-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="hriTVlDyNItKuXLIzfGo-2" value="ImageStream" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="hriTVlDyNItKuXLIzfGo-1">
+        <mxCell id="hriTVlDyNItKuXLIzfGo-2" value="ImageStream" style="rounded=0;whiteSpace=wrap;html=1;" parent="hriTVlDyNItKuXLIzfGo-1" vertex="1">
           <mxGeometry x="350" y="360" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="hriTVlDyNItKuXLIzfGo-3" value="ImageStreamTag" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="hriTVlDyNItKuXLIzfGo-1">
+        <mxCell id="hriTVlDyNItKuXLIzfGo-3" value="ImageStreamTag" style="whiteSpace=wrap;html=1;rounded=0;" parent="hriTVlDyNItKuXLIzfGo-1" vertex="1">
           <mxGeometry x="550" y="360" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="hriTVlDyNItKuXLIzfGo-5" value="ImageStreamImage" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="hriTVlDyNItKuXLIzfGo-1">
+        <mxCell id="hriTVlDyNItKuXLIzfGo-5" value="ImageStreamImage" style="whiteSpace=wrap;html=1;rounded=0;" parent="hriTVlDyNItKuXLIzfGo-1" vertex="1">
           <mxGeometry x="550" y="260" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="hriTVlDyNItKuXLIzfGo-8" value="DockerImage" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="hriTVlDyNItKuXLIzfGo-1">
+        <mxCell id="hriTVlDyNItKuXLIzfGo-8" value="DockerImage" style="whiteSpace=wrap;html=1;rounded=0;" parent="hriTVlDyNItKuXLIzfGo-1" vertex="1">
           <mxGeometry x="550" y="460" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
@@ -521,6 +521,14 @@
         <mxCell id="MBCNGuD6CNJ79KCDy19I-3" value="Secret" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="MBCNGuD6CNJ79KCDy19I-1">
           <mxGeometry x="570" y="360" width="120" height="60" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="UKH4g4hAGrmG0f2U772N" name="DNS">
+    <mxGraphModel dx="1422" dy="766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="zdK5JZ2LSgptuxGGmpzW-0" />
+        <mxCell id="zdK5JZ2LSgptuxGGmpzW-1" parent="zdK5JZ2LSgptuxGGmpzW-0" />
       </root>
     </mxGraphModel>
   </diagram>
