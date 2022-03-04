@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-03-02T09:55:54.761Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" etag="BrbAvkVSkDHtV7_x8zfe" version="16.5.6" type="github" pages="16">
+<mxfile host="app.diagrams.net" modified="2022-03-04T06:26:52.479Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" etag="BfvS6rCDGeDaEXbd9tr_" version="16.6.4" type="github" pages="16">
   <diagram id="fqtC57XP0jYVe-Dkvt3n" name="BuildConfig">
-    <mxGraphModel dx="3346" dy="1853" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2578" dy="1448" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -551,9 +551,26 @@
       <root>
         <mxCell id="zdK5JZ2LSgptuxGGmpzW-0" />
         <mxCell id="zdK5JZ2LSgptuxGGmpzW-1" parent="zdK5JZ2LSgptuxGGmpzW-0" />
-        <mxCell id="oYgl3Oi9TN8pa3gL12hc-0" value="DNS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="zdK5JZ2LSgptuxGGmpzW-1">
-          <mxGeometry x="354" y="555" width="120" height="60" as="geometry" />
+        <mxCell id="oYgl3Oi9TN8pa3gL12hc-0" value="DNS" style="rounded=0;whiteSpace=wrap;html=1;" parent="zdK5JZ2LSgptuxGGmpzW-1" vertex="1">
+          <mxGeometry x="340" y="840" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="gvMsZK3FVpM3WqrO8EdM-1" value="&lt;h1&gt;DNS Operator&lt;/h1&gt;&lt;div&gt;DNS Operator는 CoreDNS를 배포하고 관리한다.&lt;/div&gt;&lt;p&gt;DNS Operator 는 operator.openshift.io API 그룹에 dns API 를 구현 한다. DaemonSet 을 사용해서 CoreDNS 를 배포하고 DaemonSet을 위한 서비스를 만든다. 그리고 Pod가 CoreDNS 서비스 IP 를 사용 할 수 있도록 지시하기 위해 kubelet 을 구성 한다.&lt;/p&gt;&lt;p&gt;DNS 관리는 CoreDNS 와 NodeResolver 를 구현하는 DNS Operator에 의해 처리 되고 DNS Operator 는 ClusterVersionOperator 로 처리 된다.&lt;br&gt;&lt;br&gt;CoreDNS Pod 가 각 노드마다 배포가 되고 CoreDNS 는 Corefile을 사용 한다(ConfigMap). 이 Corefile은 ConfigMap 을 통해 DNS Operator에 의해 관리 된다.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="zdK5JZ2LSgptuxGGmpzW-1">
+          <mxGeometry x="49" y="170" width="730" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="kUN_x3WWFGtEUF90sXdH-0" value="&lt;h1&gt;&lt;span&gt;API&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;operator.openshift.io/v1 DNS -&amp;gt; DNS operator 가 구현 한 API&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;config.openshift.io/v1DNS -&amp;gt; 클러스터 전체 에 대한 DNS 설정 정보? (아직 잘 모르겠음 프라이빗 클러스터 설정 할 때 사용됨)&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="zdK5JZ2LSgptuxGGmpzW-1">
+          <mxGeometry x="49" y="390" width="731" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="kUN_x3WWFGtEUF90sXdH-1" value="&lt;h1&gt;Spec&lt;/h1&gt;&lt;p&gt;&lt;b&gt;operator.openshift.io&lt;/b&gt;&lt;/p&gt;&lt;p&gt;managementState : 리소스 관리에 대한 설정 default - Managed&lt;/p&gt;&lt;p&gt;nodePlacement : DNS Pod 배치 제어&lt;/p&gt;&lt;p&gt;servers : etc/resov.conf 에서 식별된 영역별 forwading 구성을 덮어 쓸 수 있음. 수정 할 경우 corefile ConfigMap 을 업데이트 한다.&amp;nbsp; custom DNS 를 구성할 때 사용하는거 같음.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="zdK5JZ2LSgptuxGGmpzW-1">
+          <mxGeometry x="50" y="510" width="730" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="kUN_x3WWFGtEUF90sXdH-2" value="https://rcarrata.com/openshift/dns-deep-dive-in-openshift/" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="zdK5JZ2LSgptuxGGmpzW-1">
+          <mxGeometry x="30" y="40" width="360" height="30" as="geometry" />
+        </mxCell>
+        <UserObject label="https://rcarrata.com/openshift/dns-forwarding-openshift/" link="https://rcarrata.com/openshift/dns-forwarding-openshift/" id="kUN_x3WWFGtEUF90sXdH-3">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="zdK5JZ2LSgptuxGGmpzW-1">
+            <mxGeometry x="16" y="70" width="380" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
@@ -562,10 +579,10 @@
       <root>
         <mxCell id="Eh1RGUXdeO_WwYPyRWG0-0" />
         <mxCell id="Eh1RGUXdeO_WwYPyRWG0-1" parent="Eh1RGUXdeO_WwYPyRWG0-0" />
-        <mxCell id="EmhoLXvr4uj-kN0Lyyn1-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Eh1RGUXdeO_WwYPyRWG0-1" source="EmhoLXvr4uj-kN0Lyyn1-0" target="EmhoLXvr4uj-kN0Lyyn1-1">
+        <mxCell id="EmhoLXvr4uj-kN0Lyyn1-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="Eh1RGUXdeO_WwYPyRWG0-1" source="EmhoLXvr4uj-kN0Lyyn1-0" target="EmhoLXvr4uj-kN0Lyyn1-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EmhoLXvr4uj-kN0Lyyn1-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="Eh1RGUXdeO_WwYPyRWG0-1" source="EmhoLXvr4uj-kN0Lyyn1-0" target="EmhoLXvr4uj-kN0Lyyn1-5">
+        <mxCell id="EmhoLXvr4uj-kN0Lyyn1-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="Eh1RGUXdeO_WwYPyRWG0-1" source="EmhoLXvr4uj-kN0Lyyn1-0" target="EmhoLXvr4uj-kN0Lyyn1-5" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="-500" y="480" />
@@ -573,19 +590,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="EmhoLXvr4uj-kN0Lyyn1-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Eh1RGUXdeO_WwYPyRWG0-1" source="EmhoLXvr4uj-kN0Lyyn1-0" target="EmhoLXvr4uj-kN0Lyyn1-3">
+        <mxCell id="EmhoLXvr4uj-kN0Lyyn1-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="Eh1RGUXdeO_WwYPyRWG0-1" source="EmhoLXvr4uj-kN0Lyyn1-0" target="EmhoLXvr4uj-kN0Lyyn1-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EmhoLXvr4uj-kN0Lyyn1-0" value="VolumeSnapshot" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Eh1RGUXdeO_WwYPyRWG0-1">
+        <mxCell id="EmhoLXvr4uj-kN0Lyyn1-0" value="VolumeSnapshot" style="rounded=0;whiteSpace=wrap;html=1;" parent="Eh1RGUXdeO_WwYPyRWG0-1" vertex="1">
           <mxGeometry x="-460" y="450" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="EmhoLXvr4uj-kN0Lyyn1-1" value="PVC" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="Eh1RGUXdeO_WwYPyRWG0-1">
+        <mxCell id="EmhoLXvr4uj-kN0Lyyn1-1" value="PVC" style="whiteSpace=wrap;html=1;rounded=0;" parent="Eh1RGUXdeO_WwYPyRWG0-1" vertex="1">
           <mxGeometry x="-260" y="450" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="EmhoLXvr4uj-kN0Lyyn1-3" value="VolumeSnapshotContent" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="Eh1RGUXdeO_WwYPyRWG0-1">
+        <mxCell id="EmhoLXvr4uj-kN0Lyyn1-3" value="VolumeSnapshotContent" style="whiteSpace=wrap;html=1;rounded=0;" parent="Eh1RGUXdeO_WwYPyRWG0-1" vertex="1">
           <mxGeometry x="-690" y="410" width="150" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="EmhoLXvr4uj-kN0Lyyn1-5" value="VolumeSnapshotClass" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="Eh1RGUXdeO_WwYPyRWG0-1">
+        <mxCell id="EmhoLXvr4uj-kN0Lyyn1-5" value="VolumeSnapshotClass" style="whiteSpace=wrap;html=1;rounded=0;" parent="Eh1RGUXdeO_WwYPyRWG0-1" vertex="1">
           <mxGeometry x="-690" y="525" width="150" height="60" as="geometry" />
         </mxCell>
       </root>
@@ -596,7 +613,7 @@
       <root>
         <mxCell id="4Lrcx4T1GKkuhHoGCZNF-0" />
         <mxCell id="4Lrcx4T1GKkuhHoGCZNF-1" parent="4Lrcx4T1GKkuhHoGCZNF-0" />
-        <mxCell id="RSZjbxCTZhVzVc7A92nT-0" value="VolumeSnapshotClass" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="4Lrcx4T1GKkuhHoGCZNF-1">
+        <mxCell id="RSZjbxCTZhVzVc7A92nT-0" value="VolumeSnapshotClass" style="rounded=0;whiteSpace=wrap;html=1;" parent="4Lrcx4T1GKkuhHoGCZNF-1" vertex="1">
           <mxGeometry x="-473" y="555" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
@@ -607,19 +624,19 @@
       <root>
         <mxCell id="i0f6hFAsfVjRY00XQ0Cj-0" />
         <mxCell id="i0f6hFAsfVjRY00XQ0Cj-1" parent="i0f6hFAsfVjRY00XQ0Cj-0" />
-        <mxCell id="-UXco4saITE0Wuih6ShB-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="i0f6hFAsfVjRY00XQ0Cj-1" source="-UXco4saITE0Wuih6ShB-0" target="-UXco4saITE0Wuih6ShB-1">
+        <mxCell id="-UXco4saITE0Wuih6ShB-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="i0f6hFAsfVjRY00XQ0Cj-1" source="-UXco4saITE0Wuih6ShB-0" target="-UXco4saITE0Wuih6ShB-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="-UXco4saITE0Wuih6ShB-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="i0f6hFAsfVjRY00XQ0Cj-1" source="-UXco4saITE0Wuih6ShB-0" target="-UXco4saITE0Wuih6ShB-3">
+        <mxCell id="-UXco4saITE0Wuih6ShB-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="i0f6hFAsfVjRY00XQ0Cj-1" source="-UXco4saITE0Wuih6ShB-0" target="-UXco4saITE0Wuih6ShB-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="-UXco4saITE0Wuih6ShB-0" value="VolumeSnapshoContent" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="i0f6hFAsfVjRY00XQ0Cj-1">
+        <mxCell id="-UXco4saITE0Wuih6ShB-0" value="VolumeSnapshoContent" style="rounded=0;whiteSpace=wrap;html=1;" parent="i0f6hFAsfVjRY00XQ0Cj-1" vertex="1">
           <mxGeometry x="-473" y="555" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="-UXco4saITE0Wuih6ShB-1" value="VolumeSnapshot" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="i0f6hFAsfVjRY00XQ0Cj-1">
+        <mxCell id="-UXco4saITE0Wuih6ShB-1" value="VolumeSnapshot" style="whiteSpace=wrap;html=1;rounded=0;" parent="i0f6hFAsfVjRY00XQ0Cj-1" vertex="1">
           <mxGeometry x="-273" y="555" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="-UXco4saITE0Wuih6ShB-3" value="VolumeSnapshotClass" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="i0f6hFAsfVjRY00XQ0Cj-1">
+        <mxCell id="-UXco4saITE0Wuih6ShB-3" value="VolumeSnapshotClass" style="whiteSpace=wrap;html=1;rounded=0;" parent="i0f6hFAsfVjRY00XQ0Cj-1" vertex="1">
           <mxGeometry x="-673" y="555" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
